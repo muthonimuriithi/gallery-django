@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'project',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,11 @@ WSGI_APPLICATION = 'photo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gallery',
+        'USER': 'postgres',
+        'PASSWORD':'bless',
+        'HOST': 'localhost'
     }
 }
 
@@ -106,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
