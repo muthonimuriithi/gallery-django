@@ -39,7 +39,7 @@ def page_category(request,category):
     category_results = Image.search_category(category)
     return render(request,'photo/index.html',{'all_images':category_results,'locations':locations,'categories':categories, 'title':title})
 
-def page_location(request,location):
+def page_location(request, location):
     locations = Location.objects.all()
     categories = Category.objects.all()
     title = f"{location}"
