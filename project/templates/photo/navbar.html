@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'landing' %}">Gallery <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'landing' %}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,7 +31,7 @@
         </a>
         <div class="dropdown-menu drop" aria-labelledby="navbarDropdown">
           {% for locat in locations %}
-          <a class="dropdown-item" href="{% url 'page_location' %}?location={{location.name}}">{{locat.location_name}}</a>
+          <a class="dropdown-item" href="{% url 'page_location' %}?locat={{location.name}}">{{locat.location_name}}</a>
           <div class="dropdown-divider"></div>
 
 
@@ -47,10 +47,10 @@
   </div>
 </nav>
 <div class="text-center header mt-5">
-  <h1 style="font-weight: bold;">The Django Photo Gallery</h1>
-  <p>Check out my gallery photos and feel free to Download!</p>
+  <h1 style="font-weight: bold;">The Gallery Galore Art</h1>
+  <p>Check out these photos and feel free to Download!</p>
   <form class="w-100 mt-5" action="{% url 'search_results' %}">
-    <input class="w-50" type="search" placeholder="search_By_Category ..." name="searchcat" aria-label="Search">
+    <input class="w-50" type="search" placeholder="Search Category" name="searchcat" aria-label="Search">
     <button class="btn rounded p-0" type="submit" style="margin-left: -50px; margin-bottom: 15px;"><img src="https://www.freeiconspng.com/uploads/search-icon-png-27.png" alt="" width="32px" height="32px"></button>
   </form>
   
