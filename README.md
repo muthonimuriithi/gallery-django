@@ -1,6 +1,6 @@
 # GALLERY-GALORE
 
-You can view the project here: 
+You can view the project here: https://shootpic.herokuapp.com/
 
 ##### By Loise Muthoni 
 
