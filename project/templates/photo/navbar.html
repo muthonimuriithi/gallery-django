@@ -16,12 +16,12 @@
           Category
         </a>
         <div class="dropdown-menu drop" aria-labelledby="navbarDropdown">
-          {% for category in categories %}
+          <!-- {% for category in categories %} -->
           <a class="dropdown-item" href="{% url 'page_category' category.category_name %}">{{category.category_name}}</a>
           <div class="dropdown-divider"></div>
 
 
-          {% endfor %}
+          <!-- {% endfor %} -->
         </div>
       </li>
 
