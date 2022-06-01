@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-from decouple import config,Csv
+
 import django_on_heroku
 
 
@@ -24,10 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRETE_KEY')
+SECRET_KEY = 'SECRETE_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'photo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':('DB_NAME'),
-        'USER': ('DB_USER'),
-        'PASSWORD':('DB_PASSWORD'),
+        'NAME':'DB_NAME',
+        'USER': 'DB_USER',
+        'PASSWORD':'DB_PASSWORD',
         'HOST': 'DB_HOST'
     }
 }
