@@ -17,7 +17,7 @@
         </a>
         <div class="dropdown-menu drop" aria-labelledby="navbarDropdown">
           {% for category in categories %}
-          <a class="dropdown-item" href="{% url 'page_category' %}?category={{category.name}}">{{category.category_name}}</a>
+          <a class="dropdown-item" href="{% url 'page_category' category.category_name %}">{{category.category_name}}</a>
           <div class="dropdown-divider"></div>
 
 
@@ -31,7 +31,7 @@
         </a>
         <div class="dropdown-menu drop" aria-labelledby="navbarDropdown">
           {% for locat in locations %}
-          <a class="dropdown-item" href="{% url 'page_location' %}?locat={{location.name}}">{{locat.location_name}}</a>
+          <a class="dropdown-item" href="{% url 'page_location' locat.location_name %}">{{locat.location_name}}</a>
           <div class="dropdown-divider"></div>
 
 
